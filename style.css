@@ -53,7 +53,7 @@ body {
     display: flex;
     border-radius: 60px;
     overflow: hidden;
-    background-color: #fff; /* Optional: Adds background color to the search bar */
+    background-color: #fff; /* Adds background color to the search bar */
 }
 
 .search-input {
@@ -94,12 +94,9 @@ footer {
         font-size: 0.9rem; /* Smaller font size for mobile */
     }
 
-    .search-input {
-        padding: 8px 10px;
-    }
-
+    .search-input,
     .search-button {
-        padding: 8px 16px;
+        padding: 8px 10px;
     }
 
     .main {
@@ -111,10 +108,11 @@ footer {
         padding: 15px 5px; /* Adjust footer padding */
         font-size: 0.75rem; /* Smaller text in the footer */
     }
-    .footer img {
-    max-width: 25px;
-    height: auto;
-    margin-right: 5px; /* Add some margin between the image and text */
-    vertical-align: middle; /* Align the text vertically with the image */
-}
 
+    .footer img {
+        max-width: 25px;
+        height: auto;
+        margin-right: 5px;
+        vertical-align: middle; /* Align the text vertically with the image */
+    }
+}
