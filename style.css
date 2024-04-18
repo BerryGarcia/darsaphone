@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Rockwell, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    box-sizing: border-box;
+}
+
+.main {
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.5) 50%), url(bg.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    height: 70px;
+    padding: 0 20px; /* Added padding */
+}
+
+.icon {
+    color: #362616;
+    text-align: left;
+    font-weight: bold;
+    display: flex;
+    align-items: center; /* Aligns the icon and text vertically */
+}
+
+.icon img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.search-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%; /* Ensures it doesn't overflow on small screens */
+    max-width: 500px; /* Limits maximum width */
+}
+
+.search-wrapper {
+    display: flex;
+    border-radius: 60px;
+    overflow: hidden;
+}
+
+.search-input {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    outline: none;
+}
+
+.search-button {
+    padding: 10px 20px;
+    background-color: #a67b5b;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #cfc2b8;
+    color: #362616;
+    text-align: center;
+    padding: 20px 10px;
+}
+
+@media (max-width: 600px) {
+    .icon span {
+        display: none; /* Hides the lengthy text on small screens */
+    }
+
+    .search-input {
+        padding: 10px;
+    }
+}

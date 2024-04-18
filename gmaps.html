@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DARSA</title>
+    <link rel="stylesheet" href="newstyle.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rockwell&display=swap">
+</head>
+<body>
+    <div class="main-content" id="map"></div>
+    <script>
+        function initMap() {
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: 13.7563, lng: 121.0580}, // Batangas, Philippines
+                zoom: 8
+            });
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>    
+

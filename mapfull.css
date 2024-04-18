@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:600|Open+Sans:600&display=swap');
+
+html, body {
+  height: 100%;  /* Ensure the full height of the viewport is used */
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+body {
+  display: flex;
+}
+
+.sidebar {
+  position: fixed;
+  width: 240px;
+  left: 0;
+  height: 100%;
+  background: rgba(207, 194, 184, 0.9); /* Example background with slight transparency */
+  transition: all .5s ease;
+  z-index: 2; /* Above the map */
+}
+
+.sidebar header {
+  font-size: 28px;
+  color: white;
+  line-height: 40px;
+  text-align: center;
+  background: white;
+  user-select: none;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.sidebar a {
+  display: block;
+  height: 65px;
+  width: 100%;
+  color: white;
+  line-height: 65px;
+  padding-left: 30px;
+  box-sizing: border-box;
+  border-bottom: 1px solid black;
+  border-top: 1px solid rgba(255, 255, 255, .1);
+  border-left: 5px solid transparent;
+  font-family: 'Open Sans', sans-serif;
+  transition: all .5s ease;
+}
+
+a.active, a:hover {
+  border-left: 5px solid #b93632;
+  color: #b93632;
+}
+
+.main-content {
+  position: relative; /* Relative positioning to place the map */
+  margin-left: 240px; /* Offset for the sidebar */
+  width: calc(100% - 240px); /* Adjust width based on the sidebar */
+  height: 100vh; /* Full viewport height */
+}
+
+.background-map {
+  width: 100%; /* Full width of its container */
+  height: 100%; /* Full height of its container */
+  border: none; /* Removes any default border around iframe */
+}
+
+@media(max-width: 860px) {
+  .sidebar {
+    width: 70px; /* Narrower sidebar on smaller screens */
+  }
+  
+  .main-content {
+    margin-left: 70px; /* Adjust according to the new sidebar width */
+    width: calc(100% - 70px); /* Fill the rest of the width */
+  }
+}

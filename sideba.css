@@ -1,0 +1,38 @@
+
+body {
+    font-family: Arial, sans-serif; 
+    margin: 0; /* Removing default margin */
+    display: flex; /* Using flexbox to arrange sidebar and content */
+    min-height: 100vh; 
+}
+
+/* Styling for the sidebar */
+.sidebar {
+    background-color: #362616; /* Dark background for the sidebar */
+    color: #cfc2b8; /* Text color */
+    padding: 10px; /* Some padding around text */
+    width: 250px; /* Fixed width for the sidebar */
+    height: 100vh; /* Full viewport height */
+    box-sizing: border-box; /* Includes padding in width */
+}
+
+/* Styling for the content area */
+.content {
+    flex-grow: 1; /* Takes up remaining space */
+    padding: 20px; /* Padding around content */
+    background-color: #f4f4f4; /* Light grey background */
+}
+
+/* Styling for navigation links in the sidebar */
+.nav-links a {
+    text-decoration: none; /* No underlines on links */
+    color: white; /* White text for visibility */
+    display: block; /* Each link is a block element */
+    padding: 8px; /* Padding for spacing */
+    margin: 5px 0; /* Margin between links */
+}
+
+/* Hover effect for links */
+.nav-links a:hover {
+    background-color: #555; /* Darker grey background on hover */
+}
