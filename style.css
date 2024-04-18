@@ -1,16 +1,20 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: Rockwell, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Rockwell', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden; /* Prevents horizontal scrolling */
 }
 
 .main {
     width: 100%;
-    background: linear-gradient(to top, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.5) 50%), url(bg.jpg);
+    background: linear-gradient(to top, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.5) 50%), url('bg.jpg');
     background-position: center;
     background-size: cover;
-    height: 100vh;
+    height: 100vh; /* Full height of the viewport */
 }
 
 .navbar {
@@ -19,7 +23,7 @@
     align-items: center;
     background-color: white;
     height: 70px;
-    padding: 0 20px; /* Added padding */
+    padding: 0 20px;
 }
 
 .icon {
@@ -27,7 +31,8 @@
     text-align: left;
     font-weight: bold;
     display: flex;
-    align-items: center; /* Aligns the icon and text vertically */
+    align-items: center;
+    font-size: larger;
 }
 
 .icon img {
@@ -40,19 +45,20 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 90%; /* Ensures it doesn't overflow on small screens */
-    max-width: 500px; /* Limits maximum width */
+    width: 90%; /* Responsive width */
+    max-width: 500px;
 }
 
 .search-wrapper {
     display: flex;
     border-radius: 60px;
     overflow: hidden;
+    background-color: #fff; /* Optional: Adds background color to the search bar */
 }
 
 .search-input {
     flex: 1;
-    padding: 15px;
+    padding: 10px 15px;
     border: none;
     outline: none;
 }
@@ -70,14 +76,39 @@ footer {
     color: #362616;
     text-align: center;
     padding: 20px 10px;
+    font-size: 0.8rem;
 }
 
 @media (max-width: 600px) {
+    .navbar {
+        flex-direction: column; /* Stack navbar items vertically */
+        height: auto;
+        padding: 10px;
+    }
+
+    .icon img {
+        height: 40px; /* Smaller logo on mobile */
+    }
+
     .icon span {
-        display: none; /* Hides the lengthy text on small screens */
+        font-size: 0.9rem; /* Smaller font size for mobile */
     }
 
     .search-input {
-        padding: 10px;
+        padding: 8px 10px;
+    }
+
+    .search-button {
+        padding: 8px 16px;
+    }
+
+    .main {
+        height: auto; /* Adjust main height on mobile */
+        padding-bottom: 50px;
+    }
+
+    footer {
+        padding: 15px 5px; /* Adjust footer padding */
+        font-size: 0.75rem; /* Smaller text in the footer */
     }
 }
