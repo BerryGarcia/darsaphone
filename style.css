@@ -111,4 +111,10 @@ footer {
         padding: 15px 5px; /* Adjust footer padding */
         font-size: 0.75rem; /* Smaller text in the footer */
     }
+    .footer img {
+    max-width: 25px;
+    height: auto;
+    margin-right: 5px; /* Add some margin between the image and text */
+    vertical-align: middle; /* Align the text vertically with the image */
 }
+
