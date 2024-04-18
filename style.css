@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: Rockwell, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-family: 'Rockwell', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     box-sizing: border-box;
 }
@@ -11,18 +12,20 @@ body {
 
 .main {
     width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.5) 50%), url(bg.jpg);
     background: linear-gradient(to top, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.5) 50%), url('bg.jpg');
     background-position: center;
     background-size: cover;
+    height: 100vh;
     height: 100vh; /* Full height of the viewport */
 }
 
 .navbar {
-    display: flex;
-    justify-content: center;
+@@ -19,15 +23,16 @@
     align-items: center;
     background-color: white;
     height: 70px;
+    padding: 0 20px; /* Added padding */
     padding: 0 20px;
 }
 
@@ -31,20 +34,18 @@ body {
     text-align: left;
     font-weight: bold;
     display: flex;
+    align-items: center; /* Aligns the icon and text vertically */
     align-items: center;
     font-size: larger;
 }
 
 .icon img {
-    height: 50px;
-    margin-right: 10px;
-}
-
-.search-container {
-    position: absolute;
+@@ -40,19 +45,20 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 90%; /* Ensures it doesn't overflow on small screens */
+    max-width: 500px; /* Limits maximum width */
     width: 90%; /* Responsive width */
     max-width: 500px;
 }
@@ -53,26 +54,17 @@ body {
     display: flex;
     border-radius: 60px;
     overflow: hidden;
-    background-color: #fff; /* Adds background color to the search bar */
+    background-color: #fff; /* Optional: Adds background color to the search bar */
 }
 
 .search-input {
     flex: 1;
+    padding: 15px;
     padding: 10px 15px;
     border: none;
     outline: none;
 }
-
-.search-button {
-    padding: 10px 20px;
-    background-color: #a67b5b;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-footer {
-    background-color: #cfc2b8;
+@@ -70,14 +76,39 @@ footer {
     color: #362616;
     text-align: center;
     padding: 20px 10px;
@@ -91,12 +83,17 @@ footer {
     }
 
     .icon span {
+        display: none; /* Hides the lengthy text on small screens */
         font-size: 0.9rem; /* Smaller font size for mobile */
     }
 
-    .search-input,
-    .search-button {
+    .search-input {
+        padding: 10px;
         padding: 8px 10px;
+    }
+
+    .search-button {
+        padding: 8px 16px;
     }
 
     .main {
@@ -107,12 +104,5 @@ footer {
     footer {
         padding: 15px 5px; /* Adjust footer padding */
         font-size: 0.75rem; /* Smaller text in the footer */
-    }
-
-    .footer img {
-        max-width: 25px;
-        height: auto;
-        margin-right: 5px;
-        vertical-align: middle; /* Align the text vertically with the image */
     }
 }
